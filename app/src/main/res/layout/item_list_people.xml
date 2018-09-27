@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/tv_image_person"
+        android:src="@drawable/mort"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_image_person"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/tv_name_person"
+        android:layout_marginTop="20dp"
+        android:text="Name"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_number_person"
+        app:layout_constraintLeft_toRightOf="@id/tv_image_person"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_person"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name_person"
+                android:text="Number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_email_person"
+        app:layout_constraintTop_toBottomOf="@id/tv_number_person"
+        app:layout_constraintLeft_toRightOf="@id/tv_image_person"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name_person"
+        android:text="E-mail"/>
+
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>
