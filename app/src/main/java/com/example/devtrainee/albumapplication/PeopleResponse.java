@@ -1,12 +1,15 @@
 package com.example.devtrainee.albumapplication;
 
+import com.example.devtrainee.albumapplication.pojo.People;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
-class PeopleResponse {
+public class PeopleResponse {
 
-    List<People> list;
+    @SerializedName("results") private List<People> peopleList;
 
     public List<People> getList() {
-        return list;
+        return peopleList;
     }
 }

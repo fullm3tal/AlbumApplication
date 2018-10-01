@@ -9,7 +9,7 @@
 
         <variable
             name="peopleViewModel"
-            type="com.example.devtrainee.albumapplication.PeopleViewModel" />
+            type="com.example.devtrainee.albumapplication.viewmodel.PeopleViewModel" />
 
     </data>
 
@@ -25,13 +25,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{peopleViewModel.peopleProgressBar}"/>
 
         <TextView
             android:id="@+id/tv_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="@{peopleViewModel.messageLabel}"
+            android:visibility="@{peopleViewModel.peopleLabelVisibility}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -44,6 +46,7 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_get_people_list"
+            android:onClick="@{() -> fabClick.onClickFabLoad()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

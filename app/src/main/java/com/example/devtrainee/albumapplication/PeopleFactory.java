@@ -17,6 +17,7 @@ public class PeopleFactory {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
+
         return retrofit.create(PeopleService.class);
 
     }

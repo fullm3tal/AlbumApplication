@@ -4,23 +4,22 @@
 
     <data>
         <variable
-            name="people"
-            type="com.example.devtrainee.albumapplication.People"/>
+            name="itemPeopleViewModel"
+            type="com.example.devtrainee.albumapplication.viewmodel.ItemPeopleViewModel"/>
     </data>
-
 
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cl_item_people">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/tv_image_person"
-        android:src="@drawable/mort"/>
+        android:src="@{itemPeopleViewModel.pictureProfile}" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +29,7 @@
         android:layout_marginLeft="5dp"
         android:id="@+id/tv_name_person"
         android:layout_marginTop="20dp"
-        android:text="" />
+        android:text="@{itemPeopleViewModel.name}" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +38,7 @@
         app:layout_constraintLeft_toRightOf="@id/tv_image_person"
         app:layout_constraintTop_toBottomOf="@id/tv_name_person"
         app:layout_constraintLeft_toLeftOf="@id/tv_name_person"
-        android:text=""/>
+        android:text="@{itemPeopleViewModel.phoneNumber}"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_number_person"
         app:layout_constraintLeft_toRightOf="@id/tv_image_person"
         app:layout_constraintLeft_toLeftOf="@+id/tv_name_person"
-        android:text=""/>
+        android:text="@{itemPeopleViewModel.email}"/>
 
 
 </android.support.constraint.ConstraintLayout>
