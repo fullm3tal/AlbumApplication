@@ -6,6 +6,7 @@ import android.databinding.BindingAdapter;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.devtrainee.albumapplication.PeopleDetailViewModel;
 import com.example.devtrainee.albumapplication.pojo.People;
 
 public class ItemPeopleViewModel extends BaseObservable{
@@ -37,6 +38,8 @@ public class ItemPeopleViewModel extends BaseObservable{
         Glide.with(imageView.getContext()).load(url).into(imageView);
     }
 
+    public void onItemClick(){
+    }
 
     public void setPeople(People people){
         this.people=people;
